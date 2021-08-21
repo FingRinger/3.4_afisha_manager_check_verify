@@ -39,4 +39,18 @@ public class MovieManager { // создаем класс, в котором бу
         return result;
     }
 
+    public void removeById(int id) {
+        int length = movies.length - 1;
+        Movie[] tmp = new Movie[length];
+        int index = 0;
+        for (Movie movie : movies) {
+            if (movie.getId() != id) {
+                tmp[index] = movie;
+                index++;
+            }
+        }
+        // меняем наши элементы
+        movies = tmp;
+    }
+
 }

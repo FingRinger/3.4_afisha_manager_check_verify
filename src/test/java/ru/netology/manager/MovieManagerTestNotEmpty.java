@@ -83,4 +83,24 @@ public class MovieManagerTestNotEmpty {
         Movie[] expected = new Movie[]{seventh, sixth, fifth, fourth, third};
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void shouldRemoveIfExists() {   // удалить существующий элемент
+        MovieManager manager = new MovieManager();
+        int idToRemove = 1;                  // определяем id эл-та, который планируем удалить
+        Movie first = new Movie(1, "ссылка", "Бладшот", "боевик");
+        Movie second = new Movie(2, "ссылка", "Вперёд", "мультфильм");
+        Movie third = new Movie(3, "ссылка", "Отель Белград", "комедия");
+
+        manager.add(first);
+        manager.add(second);
+        manager.add(third);
+
+        manager.removeById(idToRemove);
+
+        Movie[] actual = manager.getAll();
+        Movie[] expected = new Movie[]{third, second};
+
+        assertArrayEquals(expected, actual);
+    }
 }
