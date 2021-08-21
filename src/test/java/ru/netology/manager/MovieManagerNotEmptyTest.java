@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import ru.netology.domain.Movie;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MovieManagerTestNotEmpty {
+public class MovieManagerNotEmptyTest {
     @Test
     public void shouldReverseOrder() {// обратный порядок, по умолчанию выводились последние 10 добавленных фильмов, для массива с 12 элементами
         MovieManager manager = new MovieManager();

@@ -5,7 +5,7 @@ import ru.netology.domain.Movie;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MovieManagerTestEmpty {
+public class MovieManagerEmptyTest {
     @Test
     public void shouldEmptyArrayNotNull() {
 
